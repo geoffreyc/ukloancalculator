@@ -121,9 +121,9 @@ if(isset($_GET['type']) && isset($_GET['basesalary']) && isset($_GET['loanammoun
     $calc = new studentLoanCalc( strtoupper($type), $salary, $loan);
 
     $result = $calc->getFromSalary($options);
-    #### Debuging ####
+    #### Debuging #####
     if(DEBUGGING) print_r($result);
-    ##################
+    ###################
     else
     {
         header('Cache-Control: no-cache, must-revalidate'); header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); header('Content-type: application/json');
